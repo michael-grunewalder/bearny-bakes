@@ -22,5 +22,12 @@ export default defineConfig({
     port: 3000,
     host: true
   },
-  integrations: [vue(), tailwind()]
+  integrations: [
+    vue(),
+    tailwind({
+      config: {
+        applyAstroPreset: false,
+        applyBaseStyles: true,
+      }
+    })]
 });

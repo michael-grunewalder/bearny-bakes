@@ -18,6 +18,9 @@
     "vue": "^3.2.30"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.2",
+    "daisyui": "^2.13.6",
+    "tailwindcss-debug-screens": "^2.2.1",
     "vite": "^2.9.1"
   }
 }
