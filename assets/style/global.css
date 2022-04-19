@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    .navbar-logo {
+        @apply w-auto h-32;
+    }
+}
+
+.logo-sm {
+    width:"100%";
+    max-width: 100px;
+}

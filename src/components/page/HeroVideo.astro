@@ -1,0 +1,39 @@
+---
+---
+<header id="video-hero" class="video-hero">
+        <div class="video-docker">
+            <video class="absolute object-cover w-screen min-h-full" src="/images/bb_header_movie.mp4" type="video/mp4" autoplay muted loop playsinline></video>
+        </div>
+    
+        <div class="video-content">
+            <div class="h-1/4 md:h-1/2">
+                <img src="/images/branding/bearny-bakes-logo-1024.png" class="mx-auto object-cover h-full w-max-screen" alt="devilicious logo">
+            </div>
+        </div>
+  </header>
+
+  <style>
+/*Video Background */
+    .video-hero{
+        @apply relative top-0 z-0 flex flex-col items-center justify-center  w-screen h-screen px-3 py-0 m-0 text-center text-white
+    }
+    .video-docker{
+        @apply absolute top-0 left-0 w-full h-full overflow-hidden 
+    }
+
+    .video-docker::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 9;
+        @apply bg-primary opacity-50;
+    }
+    .video-content{
+        @apply z-10 space-y-2 flex items-center justify-center
+    }
+
+/*End of Video Background*/
+</style>

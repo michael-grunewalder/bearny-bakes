@@ -1,12 +1,53 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Logo from '../components/branding/Logo.astro';
+import HeroVideo from '../components/page/HeroVideo.astro';
+import BearnyBakesClub from '../components/sections/BearnyBakesClub.astro';
+import NewsLetter from '../components/forms/Newsletter.astro';
 
-let title = 'Astro Minimal Starter';
+let title = 'Bearny Bakes';
 let description = 'This is a starter repo for an blog built with Astro including open graph tags, canonical urls, RSS, sitemap support.';
 let permalink = 'https://example.com/';
 ---
 
 <BaseLayout title={title} description={description} permalink={permalink} canonicalURL={Astro.canonicalURL.href}>
-    <h1 class="text-4xl text-branding-primary">Astro Minimal Starter</h1>
-    <a href="/blog">Blog</a>
+    <HeroVideo slot="hero-section" />
+    <section class="p-6 text-xl text-ebony-500 font-fredoka">
+        <div class="grid grid-cols-1 lg:grid-cols-3 lg:gap=2">
+            <div style="background-image: url(/images/macaroons-small.jpg);" class="hidden w-full bg-center bg-no-repeat bg-cover rounded-lg shadow-lg lg:flex lg:flex-col shadow-cranberry-400 grow-0 shrink-0 basis-auto">&nbsp;</div>
+            
+            <div class="col-span-2 px-8" >
+                <h2 class="my-4 mt-12 text-4xl md:text-5xl text-primary font-cookie">Treat your taste buds</h2>
+                <p>The devil is in the details. We make the finest baked goods with premium ingredients and time-honored recipes.</p>
+        
+                <h2 class="my-4 mt-12 text-4xl md:text-5xl text-primary font-cookie">You deserve the best</h2>
+                <p>That's why our bakers only use the finest, freshest ingredients and serve up sweet treats that are sure to tantalize your taste buds and fill your soul with delight!</p>
+            </div>
+
+            <img src="/images/macaroons-small.jpg" class="w-full my-8 rounded-lg shadow-lg lg:hidden shadow-cranberry-400 " data-aos="fade-up" /> <!-- only on smaller screens-->
+        </div>
+    </section>
+    <BearnyBakesClub />
+    <section class="p-6 text-xl text-ebony-500c font-fredoka">
+        <div class="mt-12 grid grid-cols-1 lg:grid-cols-3 lg:gap=2">
+            
+            <div class="col-span-2 px-8">
+                <h2 class="my-4 mt-12 text-4xl md:text-5xl text-primary font-cookie">Fresh baked goodness shipped right to your doorstep</h2>
+                <p>Ever wish you had a personal chef, a cookie genius, and a dessert magician all in one? Well now you can, we bake on order so our products are always fresh to guarantee the best quality!</p>
+        
+                <h2 class="my-4 mt-12 text-4xl md:text-5xl text-primary font-cookie">Quality guaranteed!</h2>
+                <p>We're committed to delivering high quality desserts at affordable prices. That's why we only use the finest ingredients and make sure all of our desserts are baked fresh to order.</p>
+            </div>
+
+            <div style="background-image: url(/images/zimtsterne.jpg)" class="hidden w-full bg-center bg-no-repeat bg-cover rounded-lg shadow-lg lg:flex lg:flex-col shadow-black grow-0 shrink-0 basis-auto">&nbsp;</div>
+            <img src="/images/zimtsterne.jpg" class="w-full my-8 rounded-lg shadow-lg lg:hidden shadow-negroni-400 basis-auto" data-aos="fade-up" /> <!-- only on smaller screens-->
+        </div>
+    </section>
+    
+     <div class="p-8 mt-24 text-2xl md:m-24 rounded-2xl text-secondary font-fredoka bg-night-shadz-500">
+        <p class="text-2xl md:text-center md:text-4xl font-fredoka text-primary">
+            Subscribe To our Newsletter <span class="text-blue-bell-500">And Always Be Up To Date</span>
+            <NewsLetter />
+        </p>
+    </div>
 </BaseLayout>
