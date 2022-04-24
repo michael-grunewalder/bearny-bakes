@@ -12,13 +12,13 @@ const {title, description, permalink, canonicalURL } = Astro.props;
   <head>
     <BaseHead title={title} description={description} permalink={permalink} canonicalURL={canonicalURL} />
   </head>
-  <body class="min-h-screen bg-branding-primary ${dev}">
+  <body class="min-h-screen bg-apricot-peach-200 ${dev}">
     <!-- Navigation -->
     <Navigation />
     <!-- Hero Section Start -->
 		<slot name="hero-section" />
     <!-- <Header/> -->
-    <main class="container relative min-h-screen mx-auto bg-apricot-peach-200 z-10">
+    <main class="container relative shadow-inner min-h-screen mx-auto bg-apricot-peach-200 z-10">
         <slot/>
     </main>
     <!-- <Footer/> -->

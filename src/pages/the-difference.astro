@@ -1,0 +1,66 @@
+---
+import BrandName from '../components/branding/BrandName.svelte';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Logo from '../components/branding/Logo.astro';
+import HeroImage from '../components/page/HeroImage.svelte';
+import BearnyBakesClub from '../components/sections/BearnyBakesClub.astro';
+import NewsLetter from '../components/forms/Newsletter.astro';
+
+let title ='The Difference';
+let description = 'When Bearny Bakes, he only uses premium ingredients to ensure you get the best possible taste and highest quality.';
+let permalink = 'https://bearny.bakes/the-difference/';
+---
+
+<BaseLayout title={title} description={description} permalink={permalink} canonicalURL={Astro.canonicalURL.href}>
+    <HeroImage slot="hero-section" title={title} use_brand='yes'/>
+    
+    <section class="p-6 pt-12 text-xl text-ebony-500 font-fredoka">
+        <div class="mt-12 grid grid-cols-1 lg:grid-cols-3 lg:gap=2">
+            
+            <div class="col-span-2 py-12 px-8">
+                <h2 class="my-4 mt-12 text-4xl md:text-5xl text-primary font-cookie">Ingredients are the key to quality</h2>
+                <p>
+                Many typical ingredients are required for cakes and cookies. One such common and important ingredient for example is butter.
+                 Many places claim to use butter but in fact, use a substitute to cut costs. 
+                 <BrandName /> with real imported butter to ensure you get the best possible quality. 
+                 We ensure that all ingredients we use are from trusted, well known brands.
+                </p>
+            </div>
+
+            <div style="background-image: url(/images/assets/butter-in-bowl.jpg)" class="hidden w-full bg-center bg-no-repeat bg-cover rounded-lg shadow-lg lg:flex lg:flex-col shadow-black grow-0 shrink-0 basis-auto">&nbsp;</div>
+            <img src="/images/assets/butter-in-bowl.jpg" class="w-full my-8 rounded-lg shadow-lg lg:hidden shadow-negroni-400 basis-auto" data-aos="fade-up" /> <!-- only on smaller screens-->
+        </div>
+    </section>
+
+    <section class="p-6 pt-12 text-xl text-ebony-500 font-fredoka">
+        <div class="mt-12 grid grid-cols-1 lg:grid-cols-3 lg:gap=2">
+            <div style="background-image: url(/images/assets/sweet-hazelnut-spread.jpg)" class="hidden w-full bg-center bg-no-repeat bg-cover rounded-lg shadow-lg lg:flex lg:flex-col shadow-black grow-0 shrink-0 basis-auto">&nbsp;</div>
+            <img src="/images/assets/sweet-hazelnut-spread.jpg" class="w-full my-8 rounded-lg shadow-lg lg:hidden shadow-negroni-400 basis-auto" data-aos="fade-up" /> <!-- only on smaller screens-->
+
+            <div class="col-span-2 py-12 px-8">
+                <h2 class="my-4 mt-12 text-4xl md:text-5xl text-primary font-cookie"><BrandName /> always fresh for you</h2>
+                <p>
+                When you place an order, we’ll get right to work in the kitchen and bake your tray of goodies fresh. 
+                We’ll then deliver it to you straight from the oven. 
+                Bearny keeps just one piece for Quality Control (or so he claims – but really, he just loves sweets.)
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="p-6 pt-12 text-xl text-ebony-500 font-fredoka">
+        <div class="mt-12 grid grid-cols-1 lg:grid-cols-3 lg:gap=2">
+            
+            <div class="col-span-2 py-12 px-8">
+                <h2 class="my-4 mt-12 text-4xl md:text-5xl text-primary font-cookie">Quality Checked</h2>
+                <p>
+                At <BrandName />, we are dedicated to providing our customers with products of the highest quality. We only offer products that have been tried and tested by our team, and only products that meet our quality standards will be shipped to our customers. 
+                </p>
+            </div>
+
+            <div style="background-image: url(/images/assets/milk-splash.jpg)" class="hidden w-full bg-center bg-no-repeat bg-cover rounded-lg shadow-lg lg:flex lg:flex-col shadow-black grow-0 shrink-0 basis-auto">&nbsp;</div>
+            <img src="/images/assets/milk-splash.jpg" class="w-full my-8 rounded-lg shadow-lg lg:hidden shadow-negroni-400 basis-auto" data-aos="fade-up" /> <!-- only on smaller screens-->
+        </div>
+    </section>
+
+</BaseLayout>
